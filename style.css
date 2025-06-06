@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&family=Work+Sans:wght@100;200;300;400;600;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed';
+}
+body{
+    height: 140vh;
+    background: linear-gradient(#4d369e, #1d4061, #5547a3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 500px;
+    background: linear-gradient(#223a83, #5266a5);
+    height: 80%;
+    padding: 20px;
+    position: relative;
+}
+.container .img{
+    width: 140px;
+    position: absolute;
+    top: -60px;
+    right: -90px;
+    z-index: -1;
+}
+header{
+    background-color: #1252A6;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 3px 3px 5px #2a2929;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inicio{
+    text-align: center;
+    padding-top: 80px;
+    color: #fff;
+    font-size: 20px;
+}
+.inicio input{
+    display: block;
+    margin: 10px auto;
+    font: 16px;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 30px;
+}
+.btn{
+    background-color: #561df2;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    transition: .3s;
+}
+.btn:hover{
+    background-color: #2a2929;
+}
+.puntaje, .jugador{
+    display: flex;
+    align-items: center;
+}
+.puntaje img, .jugador img{
+    width: 35px;
+    background-color: #1252A6;
+    border-radius: 50%;
+    border: 2px solid #ffe43a;
+    z-index: 2;
+}
+.puntaje .puntos{
+    background-color: #4f47a3;
+    width: 90px;
+    display: block;
+    padding: 5px;
+    border-radius: 0 30px 30px 0;
+    margin-left: -5px;
+    z-index: 0;
+    font-size: 16px;
+}
+.jugador .nombre{
+    background-color: #4f47a3;
+    width: 90px;
+    padding: 5px;
+    border-radius: 30px 0 0 30px;
+    margin-right: -5px;
+    font-size: 16px;
+}
+/* SECCION MENU */
+.menu{
+    margin-top: 50px;
+    color: #fff;
+    text-align: center;
+}
+.categorias{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 170px 170px;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+.categoria{
+    background-color: #191b2e;
+    height: 90px;
+    border-radius: 15px;
+    color: #fff;
+    display: flex;
+    align-items: end;
+    padding: 20px;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+}
+.categoria .foto-categoria{
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    transition: .3s;
+}
+.categoria:hover{
+    box-shadow: 0 0 15px #ffe43a;
+}
+.categoria:hover .foto-categoria{
+    scale: 1.2;
+}
+/* SECCION DE PREGUNTAS */
+.juego{
+    color: #fff;
+    margin-top: 30px;
+    text-align: center;
+}
+.juego .pregunta{
+    margin: 10px 0 30px 0;
+    font-size: 20px;
+}
+.juego .opcion{
+    display: block;
+    width: 90%;
+    margin: auto;
+    border: 0;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+/* estas clases se aplicarán de forma dinámica */
+.correcta{
+    background-color: rgba(56,255,202,1);
+}
+.incorrecta{
+    background-color: rgba(255,56,56,1);
+}
+
+/* animación para los puntos */
+.efecto{
+    animation: 1s zoom;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+        color: #fff;
+        font-weight: bold;
+    }
+    40%{
+        transform: scale(1.3);
+        color: #ffe43a;
+    }
+    60%{
+        transform: scale(1.3);
+        color: #ffe43a;
+    }
+    100%{
+        transform: scale(1);
+        color: #fff;
+        font-weight: normal;
+    }
+}
+
+/* CLASES ADICIONES */
+/* desabilita los clicks en los botones
+del menú principal, cuando se completa la pregunta */
+.no-events{
+    pointer-events: none;
+}
+/* pondrá de color gris la opción que no se pueda
+elegir del menú */
+.desabilitada{
+    filter: grayscale(.9) opacity(.7);
+}
+
+/* SECCION FINAL */
+.final{
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+}
+.final .medalla{
+    position: relative;
+    width: 100px;
+    margin: 2px auto;
+}
+.final .medalla .nombre{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+}
+.final img{
+    display: block;
+    width: 100px;
+    margin: auto;
+}
+.final .puntaje-final{
+    font-size: 50px;
+    margin-top: 20px;
+    display: block;
+}

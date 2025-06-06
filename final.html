@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZIGAME</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="img/logo.png" alt="" class="img">
+        <header>
+            <div class="puntaje">
+                <img src="img/puntos.png" alt="">
+                <span class="puntos" id="puntos">0</span>
+            </div>
+            <div class="jugador">
+                <span class="nombre" id="nombre"> - </span>
+                <img src="img/userh.png" alt="">
+            </div>
+        </header>
+
+        <!-- PANTALLA FINAL -->
+        <main class="final">
+            <h2>JUEGO FINALIZADO</h2>
+            
+            <div class="medalla">
+                <img src="img/puntos2.png" alt="">
+                <h3 id="nombre-jugador" class="nombre"> Kelly</h3>
+            </div>
+
+            <span class="puntaje-final" id="puntaje-final">10000
+            Puntos</span>
+
+            <h2>ACEPTADAS: <span class="final-score"
+            id="total-acertadas">20</span></h2>
+            <h2>INCORRECTAS: <span class="final-score"
+                id="total-no-acertadas">10</span></h2>
+
+                <button class="btn" id="btn-comenzar">Comenzar de Nuevo</button>
+        </main>
+    </div>
+    <script src="js/final.js"></script>
+</body>
+</html>
